@@ -3,7 +3,6 @@ open class Human(name: String) {
     var name = name
     var havaMana = true
 
-
     open fun attack() {
         println("$name use Fist Attack!")
         //fist attack do not need mana
