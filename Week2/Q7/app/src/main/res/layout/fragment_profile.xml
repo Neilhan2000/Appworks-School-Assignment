@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileConstraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00960000">
+
+        <ImageView
+            android:id="@+id/myPhoto"
+            android:layout_width="0dp"
+            android:layout_height="387dp"
+
+            android:padding="@dimen/button_padding"
+            android:scaleType="fitXY"
+            android:src="@drawable/myphoto"
+            app:layout_constraintBottom_toTopOf="@+id/nameBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/nameBox"
+            style="@style/profile_titlt_style"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/button_padding"
+            android:layout_marginEnd="4dp"
+            android:text="Name"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nickNameBox"
+            app:layout_constraintEnd_toStartOf="@+id/nickNameBox"
+            app:layout_constraintStart_toStartOf="@+id/myPhoto" />
+
+        <TextView
+            android:id="@+id/nickNameBox"
+            style="@style/profile_titlt_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="@dimen/button_padding"
+            android:text="Nick Name"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/myPhoto"
+            app:layout_constraintStart_toEndOf="@+id/nameBox"
+            app:layout_constraintTop_toBottomOf="@+id/myPhoto"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/profile_text_style"
+            android:layout_width="0dp"
+            android:text="Tsai Cheng Han"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nickName"
+            app:layout_constraintEnd_toStartOf="@+id/nickName"
+            app:layout_constraintStart_toStartOf="@+id/nameBox" />
+
+        <TextView
+            android:id="@+id/nickName"
+            style="@style/profile_text_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Han"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toTopOf="@+id/aboutMeBox"
+            app:layout_constraintEnd_toEndOf="@+id/nickNameBox"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/name"
+            app:layout_constraintTop_toBottomOf="@+id/nickNameBox" />
+
+        <TextView
+            android:id="@+id/aboutMeBox"
+            style="@style/profile_titlt_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="About Me"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/nickNameBox"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/nameBox"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            app:layout_constraintVertical_bias="0.064" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/aboutMeBox"
+            app:layout_constraintStart_toStartOf="@+id/aboutMeBox"
+            app:layout_constraintTop_toBottomOf="@+id/aboutMeBox">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/self_description_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/selfDescription" />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
