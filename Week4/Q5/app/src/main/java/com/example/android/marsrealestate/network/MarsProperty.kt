@@ -32,7 +32,19 @@ data class MarsProperty(
         // used to map img_src from the JSON to imgSrcUrl in our class
         @Json(name = "img_src") val imgSrcUrl: String,
         val type: String,
-        val price: Double) : Parcelable {
-                val isRental
-                        get() = type == "rent"
+        val price: Double,
+        val transformed_type: String = if (type == "rent") {
+                "For Rent"
+        } else {
+                "For Sale"
+        },
+        val transformed_price: String = if(type == "rent"){
+                "$${price.toInt()}/month"
+        } else{
+                "$${price.toInt()}"
         }
+
+        ) : Parcelable {
+        val isRental
+                get() = type == "rent"
+}

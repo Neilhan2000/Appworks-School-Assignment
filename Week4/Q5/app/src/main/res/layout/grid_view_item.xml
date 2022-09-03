@@ -20,8 +20,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-    <!-- TODO (08) Add the viewModel data variable to this layout -->
-    <!-- TODO (09) Set the app:imageUrl attribute to viewModel.property.imgSrcUrl -->
+
     <data>
         <variable
             name="property"
@@ -54,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:textColor="#de000000"
-            android:text="@{property.type}"
+            android:text="@{property.transformed_price}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -68,7 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textColor="#de000000"
-            android:text="@{String.valueOf(property.price)}"
+            android:text="@{String.valueOf(property.transformed_type)}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
